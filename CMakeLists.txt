@@ -19,17 +19,12 @@ endif()
 
 file(GLOB_RECURSE SRC
 	src/*.c
-	vendor/clogs/src/*.c
-	vendor/raylibExtras/rlExtrasC/*.c
 )
 
 add_executable(game ${SRC})
 target_include_directories(game
 	PUBLIC src
-	PUBLIC vendor/vector/src
-	PUBLIC vendor/clogs/src
 	PUBLIC vendor/raylib/external
-	PUBLIC vendor/raylibExtras/rlExtrasC
 )
 
 target_link_libraries(game PRIVATE raylib)
